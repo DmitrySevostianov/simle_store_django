@@ -1,0 +1,45 @@
+{% extends 'base.html' %}
+
+
+{% block title %}
+
+	<title> Products </title>
+
+{% endblock %}
+
+
+
+{% block content %}
+
+	
+	{% if product_list != None %}
+	
+		<ul>
+			{% for product in product_list %}
+				<li>
+			         <h3>
+				      <a href="{% url 'products:product_detail' product.pk %}"> 
+				      	{{ product.name }} 
+				      </a>
+				   </h3>
+				</li>
+
+			{% endfor %}		
+		</ul>
+
+
+	{% else %}
+	
+
+		<div class="starter-template">
+
+	        <h1>No items in models</h1>
+
+	        <p class="lead"> <b> Note : </b> to upload data to Product model, use <br> $ python manage.py loaddata fixtures/products.json --app products </p>
+
+	    </div>
+
+     {% endif %}
+
+
+{% endblock %}

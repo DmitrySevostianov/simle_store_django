@@ -1,0 +1,1 @@
+[{"model": "products.product", "pk": 1, "fields": {"name": "Raspberry pi 3 B", "price": 3000, "description": "Loren ipsum"}}, {"model": "products.product", "pk": 2, "fields": {"name": "Raspberry pi Zero", "price": 1400, "description": "Loren ipsum"}}]
